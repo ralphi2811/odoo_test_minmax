@@ -1,0 +1,34 @@
+# Configuration Odoo
+ODOO_HOST = 'your-database.odoo.com'  # Nom d'hôte de votre instance Odoo
+ODOO_PORT = 443                       # Port (443 pour HTTPS)
+ODOO_DB = 'your-database'            # Nom de votre base de données
+ODOO_USER = 'user@example.com'       # Email de connexion
+ODOO_PASSWORD = 'your-password'      # Mot de passe
+
+# Configuration des produits
+# None = tous les produits stockables
+# Un seul ID = [123]
+# Plusieurs IDs = [123, 456, 789]
+PRODUCT_IDS = None
+
+# Liste des sociétés à traiter
+COMPANIES = [
+    {'id': 1, 'name': 'Société principale'},
+    {'id': 2, 'name': 'Société secondaire'},
+    # Ajoutez d'autres sociétés selon vos besoins
+]
+
+# Liste des entrepôts à traiter
+WAREHOUSES = [
+    {
+        'id': 1,
+        'name': 'Entrepôt principal',
+        'location_id': 1,  # ID de l'emplacement de stock (stock.location)
+    },
+    {
+        'id': 2,
+        'name': 'Entrepôt secondaire',
+        'location_id': 2,
+    },
+    # Ajoutez d'autres entrepôts selon vos besoins
+]
